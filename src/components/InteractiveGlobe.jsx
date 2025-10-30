@@ -70,20 +70,13 @@ const Marker = ({ location, radius, onSelect, onHover, isActive }) => {
 const GlobeSurface = () => {
   const texture = useLoader(
     TextureLoader,
-    "https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets/earth-day/earthmap1k.jpg",
-    (loader) => {
-      loader.crossOrigin = "anonymous";
-    }
+    "https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets/earth-day/earthmap1k.jpg"
   );
 
   return (
     <mesh>
       <sphereGeometry args={[2, 64, 64]} />
-      <meshStandardMaterial
-        map={texture}
-        color={!texture ? "#3b82f6" : undefined}
-        emissive="black"
-      />
+      <meshStandardMaterial map={texture} />
     </mesh>
   );
 };
