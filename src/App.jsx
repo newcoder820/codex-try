@@ -1,5 +1,5 @@
 import React from "react";
-import InteractiveMap from "./components/InteractiveMap.jsx";
+import InteractiveGlobe from "./components/InteractiveGlobe.jsx";
 
 const sampleLocations = [
   {
@@ -58,7 +58,7 @@ const appStyles = {
 
 const App = () => (
   <div style={appStyles}>
-    <InteractiveMap locations={sampleLocations} />
+    <InteractiveGlobe locations={sampleLocations} />
   </div>
 );
 
